@@ -1,0 +1,44 @@
+<script>
+
+    var population = 2418 * 10000;
+
+    var gender = 0.5;
+
+    var age_percent = 0.045;
+
+    var people_num = population * gender * age_percent;
+
+    console.log('people num:',people_num);
+
+    var average_height_percent = 0.5;
+
+    var average_income_percent = 0.5;
+
+    var average_face_percent = 0.8;
+
+    var average_car_percent = 361 * 10000 / population;
+
+    var average_house_percent = 0.6;
+ 
+    var face_percent = 0.05;
+    
+    var height_percent = 0.5;
+
+    var income_percent = 0.5;
+
+    var car_percent = 361 * 10000 / population;
+
+    var house_percent = 0.6;
+
+    if(face_percent <= 0.05)
+    {
+        income_percent = 0.7;
+        car_percent = 1;
+        house_percent = 1;
+    }
+
+    var people_num = people_num *face_percent * height_percent * income_percent * car_percent * house_percent;
+
+    console.log('people num:',people_num);
+
+</script>
