@@ -3,7 +3,132 @@
     var a = 0;
     var b = "0";
     var ret = a + b;
-    console.log('ret:',ret);
+    console.log('ret:', ret);
+
+    //这是一个数字类型
+    var number = 12;
+    var float = 12.5;
+
+    var string = "12.5";
+
+    //这是一个字符串
+    var string = "string";
+
 
     //定义两个数字变量 分别为10 8  ，然后相加，得到结果
+
+    // * 把这两个数字变量相乘
+    // / 把两个数字变量相除，看得到的结果是什么类型的
+    // % 把两个数字求余
+    // - 把两个数字相减
+
+    var a = 10;
+    var b = 8;
+    var c = 2;
+
+    var ret = a + b + c;
+    ret = a + b * c
+    a + b - c
+    a - c + b
+
+    a + c / b * (c + a)
+    a + c / b * 12
+    10 + 12 * 2 / 8
+    10 + 3
+
+
+    if (a < b) {
+        console.log('if')
+    } else {
+        console.log('else')
+    }
+
+
+    var bool_var = true;
+    var bool_var_false = false;
+
+    var ret = a < b;
+
+    // && 与运算，同时满足true 才返回true 否则返回false
+    var ret = true && 2 > 1;
+    console.log('ret:', ret);
+
+    var ret = 4 < 3 && 2 > 1;
+    console.log('ret:', ret);
+
+    var ret = a > b && c < b && 4 > c;
+    console.log('ret:', ret);
+
+    // || 只要其中一个为true,就是true 否则false
+    var ret = true || false;
+    console.log('ret:', ret);
+
+    var ret = 4 < 3 || 2 > 1;
+    console.log('ret:', ret);
+
+    var ret = 4 < 3 || 2 > 1 && 4 < 3;
+    console.log('ret:', ret);
+
+
+    // ！非运算 true变成false false变成true
+    var ret = !false
+    var ret = !(3 > 4)
+
+    var null_var = null;
+    var undefined_var = undefined;
+
+    //这是一个字符串
+    var string = '11223';
+
+    if (null_var == null) {
+        console.log('if');
+    } else {
+        console.log('else');
+    }
+
+    var arr = [12, '12string', null, true, false, undefined];
+    //var arr = new Array(1,'string',true,false,undefined);
+
+    // 数组的索引从0开始
+    arr[0];
+    arr[6];
+
+    // key是字符串类型的，value是任何类型
+    var object = {
+        key: value,
+    }
+
+
+    var location = {
+        'lng':124,
+        'lat':133
+    };
+
+    var person = {
+        name: 'lihaibo',
+        age: 29,
+        city: "ShangHai",
+        hometown: "TaiZhou",
+        income: null,
+        height: undefined,
+        marry: false,
+        languages: ["chinese", "english"],
+        man: true,
+        location:location
+    }
+
+
+    person.age
+    person['age']
+
+    person.location.lng
+
+    //对象名.属性名  或  对象名['属性名']
+
+    /*
+    1.将你们的家庭的每个成员，写成object类型，数据包含以上数据
+    2.将家庭的成员的年龄之和算出来
+    3.将家庭成员的city组成数组
+    */
+
 </script>
