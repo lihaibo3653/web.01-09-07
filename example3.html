@@ -1,0 +1,94 @@
+<script>
+
+    function f() {
+
+    }
+
+    f();
+
+    function abs(x) {
+        if (x < 0) {
+            return -x;
+        }
+        return x;
+    }
+
+    var v = abs(10);
+    console.log('v:', v);
+
+    var abs = function () {
+
+    }
+
+
+    var args = function (arg1) {
+        console.log('arguments:', arguments);
+        console.log('arg1:', arg1);
+
+        arguments[0];
+        arguments[1];
+    }
+
+    //传入这些参数，然后将这些参数都打印出来。
+    //将传入的参数 累加求和，将值返回回来
+    args(1, 2, 3, 4, 5, 6);
+
+    var sum = function () {
+        var value = 0;
+        for (var i = 0; i < arguments.length; ++i) {
+            value += arguments[i];
+            console.log(arguments[i]);
+        }
+        return value;
+    }
+
+
+    //获取传入函数当中的最大值
+    var max = function (a, b) {
+        if (a > b) {
+            return a;
+        }
+        if (b > a) {
+            return b;
+        }
+        return undefined;
+    }
+
+    var v = max(2, 19);
+    var v1 = max(2, 2);
+    var v2 = max(11, 10);
+
+    var max = function (a, b, c) {
+        var arrs = [a, b, c];
+        var max_value; //undefined
+        //var max_value = -111111111111111;
+        var max_value = arrs[arrs.length - 1];
+        for (var i = 0; i < arrs.length - 1; ++i) {
+            if (max_value < arrs[i]) {
+                console.log("当前最大值是:", max_value)
+                max_value = arrs[i];
+            }
+        }
+        return max_value;
+    }
+
+    max(2, 9, 10);
+
+
+    //求得商品总价格，然后乘以折扣
+    var discount = function (price_arr, discout) {
+        var sum = 0;
+        for (var i = 0; i < price_arr.length; ++i) {
+            var p = price_arr[i];
+            var s = p[0] * p[1];
+            sum += s;
+        }
+        return sum * discount;
+    }
+
+
+    var arrs = [[10, 1], [12, 7], [100, 2], [222, 4]]
+    discount(arrs, 0.7);
+
+
+</script>

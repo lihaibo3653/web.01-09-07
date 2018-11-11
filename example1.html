@@ -95,13 +95,13 @@
 
     // key是字符串类型的，value是任何类型
     var object = {
-        key: value,
+        key: 'value',
     }
 
 
-    var location = {
-        'lng':124,
-        'lat':133
+    var lc = {
+        'lng': 124,
+        'lat': 133
     };
 
     var person = {
@@ -114,9 +114,15 @@
         marry: false,
         languages: ["chinese", "english"],
         man: true,
-        location:location
+        location: lc
     }
 
+
+    for (var key in person) {
+        console.log('key:', key);
+    }
+
+    //将object的value输出来
 
     person.age
     person['age']
@@ -130,5 +136,70 @@
     2.将家庭的成员的年龄之和算出来
     3.将家庭成员的city组成数组
     */
+
+    var sum = 0;
+    for (var i = 0; i <= 1000; i++) {
+        sum = sum + i;
+    }
+    console.log('sum:', sum);
+
+    //计算 1*2*3 。。。。 *100的结果
+    //计算 1-100中 偶数的相乘的结果
+
+
+    var i = 0;
+    if (i <= 1000) {
+        //i++
+        i = i + 2;
+        //写逻辑
+    }
+    //接下来的逻辑
+
+    var sum = 1;
+    for (var i = 2; i <= 100; i = i + 2) {
+        sum = sum * i;
+    }
+    console.log('sum:', sum);
+
+
+    var city = ["shanghai", "taizhou"];
+    for (var i = 0; i < city.length; i++) {
+        console.log('city:', city[i], ' 下标:', i);
+    }
+
+    //实现一个函数，传入一个数字，判断是不是质数
+    var is_prime = function (num) {
+        var is_prime = true;
+        // 循环进行求余
+        for (var i = 2; i < num; ++i) {
+            if (num % i == 0) {
+                //不是质数
+                is_prime = false;
+                break;
+            }
+        }
+        return is_prime;
+    }
+
+
+    var sum = 0;
+    for (var num = 2; num <= 100; ++num) {
+        var is_prime = is_prime(num);
+        console.log('num ', num, ' 是否质数：', is_prime);
+        if (is_prime) {
+            //sum += num;
+            sum = sum + num;
+        }
+    }
+    console.log('和:', sum);
+
+    var f = function (x) {
+        x = x + 1;
+        return x;
+    }
+
+    var v = f(1);
+    //undefined
+    
 
 </script>
