@@ -1,0 +1,79 @@
+<script>
+    //将字符串首字母转大写的函数
+    var firstcharuppercase = function (s) {
+        var fc = s[0];
+        var upper_fc = fc.toUpperCase();
+        return upper_fc + s.substring(1);
+    };
+
+    // ret_string == 'Hello'
+    var ret_string = firstcharuppercase("hello");
+    console.log(ret_string);
+
+    // 对传入的数值加3，然后返回
+    var add_three = function (n) {
+        if (typeof n != 'number') {
+            console.log('请传入正确的数字类型参数:', n);
+            return
+        }
+        var three = 3;
+        var add = function () {
+            var new_num = n + three;
+            return new_num;
+        };
+        return add();
+    }
+
+    add_three(4)
+
+    // ret_number = 8
+    var ret_number = add_three(5);
+
+
+    var f = function () {
+        return 1;
+    }
+
+    var F = function () {
+        return 2;
+    }
+
+    var f = 1.1;
+    parseInt(f);
+
+    var person = {
+        'name': 'lihaibo',
+        'age': 29,
+        'add_age': function () {
+            return this.age + 1;
+        }
+    }
+
+    var add_page_fun = person.add_age;
+    add_page_fun();
+
+    for (key in person) {
+        var v = person[key];
+        typeof v;
+    }
+
+    //JS Date的对象
+
+    var d = new Date();
+    var year = d.getFullYear();
+    var month = d.getMonth();
+    var date = d.getDate();
+    var hour = d.getHours();
+    var minute = d.getMinutes();
+    var second = d.getSeconds();
+
+    console.log('d:', d);
+    console.log('year:', year, 'month:', month, 'date:', date, 'hour:', hour, 'minute:', minute, 'second:', second);
+
+    //月份是从0开始的，0代表1月份。 11代表12月份
+
+    if(d.getDate() == 11 && d.getMonth() == 11 && d.getHours() == 0 && d.getMinutes() == 0 && d.getSeconds() == 0)
+    {
+        console.log('双十一开始啦！开始剁手吧');
+    }
+</script>
